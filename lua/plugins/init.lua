@@ -26,6 +26,7 @@ return {
 
   {
     "nvim-tree/nvim-tree.lua",
+    lazy=false,
     opts = function()
       local conf = require "configs.nvimtree"
       local custom = require "configs.nvimtree"
