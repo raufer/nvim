@@ -52,13 +52,14 @@ return {
     lazy=false
   },
 
-  {
-    "Pocco81/TrueZen.nvim",
-    cmd = { "TZAtaraxis", "TZMinimalist" },
-    config = function()
-      require "custom.configs.truezen" -- just an example path
-    end,
-  },
+  -- {
+  --   "Pocco81/TrueZen.nvim",
+  --   lazy=false,
+  --   cmd = { "TZAtaraxis", "TZMinimalist" },
+  --   config = function()
+  --     require "configs.truezen" -- just an example path
+  --   end,
+  -- },
   
   {
     "phaazon/hop.nvim",
@@ -67,7 +68,27 @@ return {
     end,
     lazy=false
   },
+  {
+    'rmagatti/auto-session',
+    lazy=false,
+    config = function()
+      require("auto-session").setup {
+        log_level = "error",
+        auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
+      }
+    end
+  },
 
+  {
+    "github/copilot.vim",
+    lazy=false,
+  },
+  {
+    "wellle/context.vim"
+  },
+  {
+    "junegunn/limelight.vim"
+  },
   -- These are some examples, uncomment them if you want to see them work!
   -- {
   --   "neovim/nvim-lspconfig",
